@@ -8,6 +8,7 @@ import { EntityExtractionComponent } from "./components/entity-extraction/entity
 import { TextSimilarityComponent} from "./components/text-similarity/text-similarity.component";
 import { LanguageDetectionComponent } from "./components/language-detection/language-detection.component";
 import { SentimentAnalysisComponent} from "./components/sentiment-analysis/sentiment-analysis.component";
+import {HistoryComponent} from "./components/history/history.component";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SentimentAnalysisComponent} from "./components/sentiment-analysis/senti
     EntityExtractionComponent,
     TextSimilarityComponent,
     LanguageDetectionComponent,
-    SentimentAnalysisComponent
+    SentimentAnalysisComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
