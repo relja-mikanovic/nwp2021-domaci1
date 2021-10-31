@@ -6,6 +6,7 @@ import {TextSimilarityComponent} from "./components/text-similarity/text-similar
 import {LanguageDetectionComponent} from "./components/language-detection/language-detection.component";
 import {SentimentAnalysisComponent} from "./components/sentiment-analysis/sentiment-analysis.component";
 import {HistoryComponent} from "./components/history/history.component";
+import {TokenGuard} from "./token.guard";
 
 const routes: Routes = [
   {
@@ -14,23 +15,28 @@ const routes: Routes = [
   },
   {
     path: "extraction",
-    component: EntityExtractionComponent
+    component: EntityExtractionComponent,
+    canActivate: [TokenGuard]
   },
   {
     path: "similarity",
-    component: TextSimilarityComponent
+    component: TextSimilarityComponent,
+    canActivate: [TokenGuard]
   },
   {
     path: "detection",
-    component: LanguageDetectionComponent
+    component: LanguageDetectionComponent,
+    canActivate: [TokenGuard]
   },
   {
     path: "sentiment",
-    component: SentimentAnalysisComponent
+    component: SentimentAnalysisComponent,
+    canActivate: [TokenGuard]
   },
   {
     path: "history",
-    component: HistoryComponent
+    component: HistoryComponent,
+    canActivate: [TokenGuard]
   }
 ];
 

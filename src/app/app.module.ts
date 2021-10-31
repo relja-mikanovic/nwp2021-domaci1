@@ -9,6 +9,7 @@ import { TextSimilarityComponent} from "./components/text-similarity/text-simila
 import { LanguageDetectionComponent } from "./components/language-detection/language-detection.component";
 import { SentimentAnalysisComponent} from "./components/sentiment-analysis/sentiment-analysis.component";
 import {HistoryComponent} from "./components/history/history.component";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import {HistoryComponent} from "./components/history/history.component";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

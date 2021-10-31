@@ -2,6 +2,17 @@
   <h3>Token Configuration</h3>
 
   <div>
+    <form (submit)="setTokenKey()" class="mb-5">
+      <div class="form-group mb-2">
+        <label for="tokenKey">Enter Token</label>
+        <input type="text" class="form-control" id="tokenKey" name="tokenKey" placeholder="Token" [(ngModel)]="tokenKey">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
 
   </div>
+
 </div>
