@@ -3,15 +3,16 @@
 
   <div>
     <form (submit)="setTokenKey()" class="mb-5">
+      <br>
       <div class="form-group mb-2">
         <label for="tokenKey">Enter Token</label>
         <input type="text" class="form-control" id="tokenKey" name="tokenKey" placeholder="Token" [(ngModel)]="tokenKey">
       </div>
-
+      <br>
       <button type="submit" class="btn btn-primary">Submit</button>
+      <br> <br>
+      Active Token: <b>{{getTokenKey()}}</b>
     </form>
-
-
 
   </div>
 

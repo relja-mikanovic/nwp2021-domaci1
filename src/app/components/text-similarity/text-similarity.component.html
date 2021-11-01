@@ -2,6 +2,19 @@
   <h3>Text Similarity</h3>
 
   <div>
+    <form (submit)="checkSimilarity(text1, text2)" class="mb-5">
+      <div class="form-group mb-2">
+        <br>
+        <label for="text1">Text 1</label>
+        <input type="text" class="form-control" id="text1" name="text1" placeholder="Text 1" [(ngModel)]="text1">
+        <br>
+        <label for="text2">Text 2</label>
+        <input type="text" class="form-control" id="text2" name="text2" placeholder="Text 2" [(ngModel)]="text2">
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">Compare</button>
 
+    </form>
+    <h4>Semantic Similarity: {{similarity*100}}%</h4>
   </div>
 </div>

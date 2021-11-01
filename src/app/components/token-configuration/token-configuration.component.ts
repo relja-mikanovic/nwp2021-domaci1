@@ -20,4 +20,9 @@ export class TokenConfigurationComponent implements OnInit {
   setTokenKey() {
     this.tokenService.setTokenKey(this.tokenKey);
   }
+
+  getTokenKey() {
+    return this.tokenService.getTokenKey();
+
+  }
 }
