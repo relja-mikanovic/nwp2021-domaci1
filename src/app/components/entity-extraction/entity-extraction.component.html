@@ -2,6 +2,28 @@
   <h3>Entity Extraction</h3>
 
   <div>
+    <form (submit)="extractEntities(text, min_confidence.valueAsNumber, includeI.checked, includeC.checked, includeA.checked)" class="mb-5">
+      <div class="form-group mb-2">
+        <br>
+        <label for="text">Enter text</label>
+        <input type="text" class="form-control" id="text" name="text" placeholder="Text" [(ngModel)]="text">
+      </div>
+      More tags <input type="range" min="0" max="100" value="60" #min_confidence> More precision
+      <br>
+      <input class="form-check-input" type="checkbox" value="image," id="image" #includeI>
+      <label class="form-check-label" for="image">Image</label>
+      <br>
+      <input class="form-check-input" type="checkbox" value="categories," id="categories" #includeC>
+      <label class="form-check-label" for="categories">Categories</label>
+      <br>
+      <input class="form-check-input" type="checkbox" value="abstract," id="abstract" #includeA>
+      <label class="form-check-label" for="abstract">Abstract</label>
+      <br><br>
+      <button type="submit" class="btn btn-primary">Extract</button>
+
+    </form>
+
+
 
   </div>
 </div>

@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   similarityApi: "https://api.dandelion.eu/datatxt/sim/v1",
   detectionApi: "https://api.dandelion.eu/datatxt/li/v1",
-  sentimentApi: "https://api.dandelion.eu/datatxt/sent/v1"
+  sentimentApi: "https://api.dandelion.eu/datatxt/sent/v1",
+  extractionApi: "https://api.dandelion.eu/datatxt/nex/v1"
 };
 
 /*

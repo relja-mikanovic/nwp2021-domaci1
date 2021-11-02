@@ -14,3 +14,9 @@ export interface Sentiment {
   text: string;
   lang: string;
 }
+
+export interface Extraction {
+  text: string;
+  min_confidence: number;
+  includeString: string;
+}
