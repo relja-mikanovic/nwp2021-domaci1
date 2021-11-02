@@ -2,6 +2,37 @@
   <h3>Sentiment Analysis</h3>
 
   <div>
+    <form (submit)="analyseSentiment(text, language)" class="mb-5">
+      <div class="form-group mb-2">
+        <br>
+        <label for="text">Enter text</label>
+        <input type="text" class="form-control" id="text" name="text" placeholder="Text" [(ngModel)]="text">
+      </div>
+      <br>
+      <div>
+      Choose language:
+        <div>
+          <input type="radio" id="auto" name="auto" value="auto"
+                 checked [(ngModel)]="language">
+          <label for="auto">Auto</label>
+        </div>
+
+        <div>
+          <input type="radio" id="en" name="en" value="en" [(ngModel)]="language">
+          <label for="en">English</label>
+        </div>
+
+        <div>
+          <input type="radio" id="it" name="it" value="it" [(ngModel)]="language">
+          <label for="it">Italian</label>
+        </div>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">Analyse</button>
+
+    </form>
+
+    <h5>Sentiment: {{score}} / {{type}} </h5>
 
   </div>
 </div>
