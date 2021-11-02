@@ -18,14 +18,14 @@ export class EntityExtractionComponent implements OnInit{
 
   includeString = "";
 
+  public annotations: any[] = [];
+
   constructor(private extractionService: ExtractionService) {}
 
   ngOnInit(): void {
   }
 
   extractEntities(text: string, min_confidence: number, includeI: boolean, includeC: boolean, includeA: boolean){
-    console.log(text);
-    console.log(min_confidence/100);
 
     if(includeI){
       this.includeString = this.includeString.concat("image,")
@@ -39,12 +39,18 @@ export class EntityExtractionComponent implements OnInit{
       this.includeString = this.includeString.concat("abstract,")
     }
 
-    console.log(this.includeString);
+
+    this.annotations = [];
 
     this.extractionService.extractEntities(text, min_confidence/100, this.includeString).subscribe((result: any) => {
       this.includeString = "";
-      //this.type = result.sentiment.type;
-    //  this.score = result.sentiment.score;
+      const array = result.annotations;
+
+      array.forEach((annt: any) => {
+        this.annotations.push(annt);
+      })
+
+      console.log(this.annotations);
 
     });
   }

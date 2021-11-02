@@ -16,6 +16,8 @@ export class ExtractionService {
   extractEntities(text: string, min_confidence: number, includeString: string): Observable<Extraction>{
     const url: string = `${this.apiUrl}?text=${text}&min_confidence=${min_confidence}&include=${includeString}&token=${localStorage.getItem("token")}`;
     return this.httpClient.get<Extraction>(url);
+
+
   }
 
 }
