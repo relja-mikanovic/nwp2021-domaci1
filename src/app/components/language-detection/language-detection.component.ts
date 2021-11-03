@@ -31,8 +31,11 @@ export class LanguageDetectionComponent implements OnInit{
 
       });
 
-
     });
+  }
+
+  getText():string{
+    return this.text;
   }
 
 }

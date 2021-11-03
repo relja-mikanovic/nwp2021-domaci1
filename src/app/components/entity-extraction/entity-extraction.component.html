@@ -27,8 +27,8 @@
     <ng-template ngFor let-annt [ngForOf]="annotations">
 
    <h5> {{annt.title}}</h5>
-      <div *ngIf="annt.image"><img src="{{annt.image.thumbnail}}" alt="" width="100" height="150"> </div> <br>
-      <div *ngIf="annt.categories"> {{annt.abstract}}</div> <br>
+      <div *ngIf="annt.image"><img src="{{annt.image.thumbnail}}" alt="" width="200" height="220"> </div> <br>
+      <div *ngIf="annt.abstract"> {{annt.abstract}}</div> <br>
       <div *ngIf="annt.categories">{{annt.categories}}</div>
       <br>
     </ng-template>
